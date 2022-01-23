@@ -1,11 +1,11 @@
 $folders = @'
-c:\users\joshu\desktop
-C:\Users\joshu\Documents
-c:\users\joshu\pictures
-'@ -split '\n'
-
+c:\users\joshu\Documents
+c:\users\joshu\Desktop
+c:\users\joshu\Pictures
+c:\users\joshu\Music
+'@ -split '\r\n'
 
 foreach ($folder in $folders) {
-    gsutil -m rsync -r $($folder) 'gs://jswain-backup-pro8'
+    gsutil -m rsync -r -x '^desktop.ini' $($folder) "gs://jswain-backup-pro8/$folder"
     
 }

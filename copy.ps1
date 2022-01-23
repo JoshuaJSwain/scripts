@@ -1,0 +1,6 @@
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\systemdata\dl\1 c:\systemdata\1\"
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\users\joshu\Documents C:\Users\joshu\Documents\"
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\users\joshu\Desktop C:\Users\joshu\desktop\" 
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\users\joshu\Pictures C:\Users\joshu\Pictures\"
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\users\joshu\Music C:\Users\joshu\Music\"
+Start-Process -filepath robocopy -ArgumentList "/mt:128 /np /e /j \\Surfacepro\c\users\joshu\OneDrive C:\Users\joshu\OneDrive\"
