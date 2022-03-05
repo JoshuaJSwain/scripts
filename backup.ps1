@@ -4,8 +4,10 @@ $folders = @'
 c:/users/joshu/Documents
 c:/users/joshu/Desktop
 c:/users/joshu/Pictures
-c:/users/joshu/Music
 '@ -split '\r\n'
+
+# music backed up locally to usb disk
+#c:/users/joshu/Music
 
 foreach ($folder in $folders) {
     gsutil -m rsync -r -c -x '^desktop.ini' $($folder) "gs://jswain-backup-pro8/$folder"
@@ -14,3 +16,6 @@ foreach ($folder in $folders) {
 
 
 #gsutil -m rsync -r -c -x '^desktop.ini' "c:/users/joshu/Desktop" "gs://jswain-backup-pro8/Desktop"
+
+# Get bucket used size
+#   gsutil du -ch -s gs://jswain-backup-pro8
