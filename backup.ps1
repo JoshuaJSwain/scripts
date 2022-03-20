@@ -4,13 +4,14 @@ $folders = @'
 c:/users/joshu/Documents
 c:/users/joshu/Desktop
 c:/users/joshu/Pictures
-'@ -split '\r\n'
+'@ -split '\n'
 
+$folders.count
 # music backed up locally to usb disk
 #c:/users/joshu/Music
 
 foreach ($folder in $folders) {
-    gsutil -m rsync -r -c -x '^desktop.ini' $($folder) "gs://jswain-backup-pro8/$folder"
+    gsutil -m rsync -r -c -x '^desktop.ini' $($folder) "gs://jswain-backup-pro8/$($folder)"
     
 }
 
