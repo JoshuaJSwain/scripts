@@ -4,7 +4,7 @@ $folders = @'
 c:/users/joshu/documents
 c:/users/joshu/desktop
 c:/users/joshu/pictures
-c:/users\joshu/"my drive"
+c:/users/joshu/"my drive"
 '@ -split '\n'
 
 $folders.count
